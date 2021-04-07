@@ -1,0 +1,1 @@
+export { reactTypescriptCustomSetup } from './ReactTypescriptTemplate'
