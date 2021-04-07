@@ -8,7 +8,7 @@ export const SandpackListener: FC = () => {
             console.log(event)
         }
 
-        window.addEventListener("message", listener);
+        window.addEventListener("message", listener, false);
 
         return () => window.removeEventListener('message', listener)
     }, []);

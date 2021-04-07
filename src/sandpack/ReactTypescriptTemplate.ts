@@ -53,13 +53,14 @@ export const reactTypescriptCustomSetup: SandpackSetup = {
 
     '/src/main.tsx': {
       code: `import React, { FC } from "react";
-    export const Main: FC = () => {
-        const buttonClick = () => {
-            window.parent.postMessage({ type: 'click', message: { element: 'button' }})
-        }
 
-        return <button onClick={buttonClick}>Trigger event</button>
-    }`,
+export const Main: FC = () => {
+    const buttonClick = () => {
+        window.parent.postMessage({ type: 'click', message: { element: 'button' }}, '*')
+    }
+
+    return <button onClick={buttonClick}>Trigger event</button>
+}`,
     },
   },
 };
