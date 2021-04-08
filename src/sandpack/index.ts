@@ -1,1 +1,1 @@
-export { reactTypescriptCustomSetup } from './ReactTypescriptTemplate'
+export { mainFile, reactTypescriptCustomSetup } from './ReactTypescriptTemplate'
