@@ -19,21 +19,22 @@ import {
 
 import '@codesandbox/sandpack-react/dist/index.css';
 import { SandpackListener } from './SandpackListener';
-import { reactTypescriptCustomSetup } from './sandpack';
+import { reactTypescriptCustomSetup, SandpackMonacoEditor } from './sandpack';
 
 const App: FC = () => {
   return (
     <div className="App">
-      <SandpackProvider customSetup={reactTypescriptCustomSetup}>
+      <SandpackMonacoEditor />
+      {/* <SandpackProvider customSetup={reactTypescriptCustomSetup}>
         <SandpackLayout>
-          <SandpackCodeEditor />
+          <SandpackMonacoEditor />
           <SandpackListener />
           <SandpackPreview
             showOpenInCodeSandbox={false}
             showRefreshButton={false}
           />
         </SandpackLayout>
-      </SandpackProvider>
+      </SandpackProvider> */}
     </div>
   );
 };
